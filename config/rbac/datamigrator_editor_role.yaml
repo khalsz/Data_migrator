@@ -1,0 +1,27 @@
+# permissions for end users to edit datamigrators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: datamigrator
+    app.kubernetes.io/managed-by: kustomize
+  name: datamigrator-editor-role
+rules:
+- apiGroups:
+  - etl.etl.com
+  resources:
+  - datamigrators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - etl.etl.com
+  resources:
+  - datamigrators/status
+  verbs:
+  - get

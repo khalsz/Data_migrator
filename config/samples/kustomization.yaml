@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- etl_v1_datamigrator.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

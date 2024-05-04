@@ -1,0 +1,23 @@
+# permissions for end users to view datamigrators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: datamigrator
+    app.kubernetes.io/managed-by: kustomize
+  name: datamigrator-viewer-role
+rules:
+- apiGroups:
+  - etl.etl.com
+  resources:
+  - datamigrators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - etl.etl.com
+  resources:
+  - datamigrators/status
+  verbs:
+  - get
