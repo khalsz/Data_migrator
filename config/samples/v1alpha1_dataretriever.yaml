@@ -1,0 +1,9 @@
+apiVersion: etl.com/v1alpha1
+kind: DataRetriever
+metadata:
+  labels:
+    app.kubernetes.io/name: datamigrator
+    app.kubernetes.io/managed-by: kustomize
+  name: dataretriever-sample
+spec:
+  # TODO(user): Add fields here
